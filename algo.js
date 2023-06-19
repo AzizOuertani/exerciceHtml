@@ -88,3 +88,46 @@
 //       fin pour 
 //   fin pour
 // }
+
+
+/*exercice Btonner*/
+fonction batonner() {
+  nbrBatonnets = 20
+  joueurActuel = 1   
+  a: entier
+  tantque (nbrBatonnets > 0) faire
+    ecrire("le nombre de btonnet est " + nbrBatonnets )
+
+    si (joueurActuel == 1) alors
+      ecrire("Joueur 1.")
+    sinon
+      ecrire("Joueur 2.")
+    fin si
+
+ecrire("combien de batonnet voulez vous retirer")
+ lire(a)
+
+    si (a >= 1 et a <= 3) alors
+      si (a > nbrBatonnets) alors
+        ecrire("nbr batonnet inssufisant.")
+      sinon
+        nbrBatonnets = nbrBatonnets - a
+                   si (joueurActuel == 1) alors
+                         joueurActuel = 2
+                     sinon
+                          joueurActuel = 1
+                             fin si
+      fin si
+    sinon
+      afficher("Saisie invalide. Veuillez choisir un nombre entre 1 et 3.")
+    fin si
+  fin tant que
+
+  si (joueurActuel == 1) alors
+    afficher("Le Joueur 2 a gagné !")
+  sinon
+    afficher("Le Joueur 1 a gagné !")
+  fin si
+}
+
+
