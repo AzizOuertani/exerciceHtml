@@ -62,28 +62,33 @@ function exercice8() {
   }
 
   for (let i = 0; i < 7; i++) {
+    let ligne = "";
     for (let j = 0; j < 13; j++) {
-      console.log(Mat[i][j]);
+      ligne += Mat[i][j] + " ";
     }
+    console.log(ligne);
   }
 }
 
 function exercice9(n) {
   for (let i = 1; i <= n; i++) {
+    let ligne = "";
     for (let j = 1; j <= i - 1; j++) {
-      console.log("*");
+      ligne += "*";
     }
-    console.log("* \n");
+    ligne += "*\n";
+    console.log(ligne);
   }
 
   for (let i = n - 1; i >= 1; i--) {
+    let ligne = "";
     for (let j = 1; j <= i - 1; j++) {
-      console.log("*");
+      ligne += "*";
     }
-    console.log("* \n");
+    ligne += "*\n";
+    console.log(ligne);
   }
 }
-
 function exercice11(h, m, s) {
   if (s === 60) {
     s = 0;
@@ -101,4 +106,3 @@ function exercice11(h, m, s) {
 
   console.log("L'heure suivante est " + h + ":" + m + ":" + s);
 }
-exercice8();
